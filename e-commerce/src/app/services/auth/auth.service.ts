@@ -21,16 +21,16 @@ export class AuthService {
   ) {
   }
 
-  _registerUrl = `http://localhost:3000/auth/register`;
-  _loginUrl = `http://localhost:3000/auth/login`;
-  _userUrl = `http://localhost:3000/auth/current-user`;
-  _profileUrl = `http://localhost:3000/profile`;
-  private _usersURL = `http://localhost:3000/auth/system-users`;
-  private _userDataURL = `http://localhost:3000/auth/user-main-data`;
+  _registerUrl = `http://localhost:4200/auth/register`;
+  _loginUrl = `http://localhost:4200/auth/login`;
+  _userUrl = `http://localhost:4200/auth/current-user`;
+  _profileUrl = `http://localhost:4200/profile`;
+  private _usersURL = `http://localhost:4200/auth/system-users`;
+  private _userDataURL = `http://localhost:4200/auth/user-main-data`;
 
-  private imageChangeUrl = `http://localhost:3000/profile/userprofile/changeprofileimage`;
-  private newImageUrl = `http://localhost:3000/profile/userprofile/setprofileimage`;
-  private contactUrl = `http://localhost:3000/contacts/new-mail`;
+  private imageChangeUrl = `http://localhost:4200/profile/userprofile/changeprofileimage`;
+  private newImageUrl = `http://localhost:4200/profile/userprofile/setprofileimage`;
+  private contactUrl = `http://localhost:4200/contacts/new-mail`;
   errorsHandler = new ErrorHandler();
   public username: string;
   public cart: Cart;
