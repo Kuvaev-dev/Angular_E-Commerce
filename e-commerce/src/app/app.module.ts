@@ -22,7 +22,7 @@ import {MaterialModule} from './shared/material/material.module';
 import {AdminModule} from "./admin/admin.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FilesModule} from "./shared/files/files.module";
-
+import { RouterModule } from '@angular/router';
 import {AccordionModule} from "ngx-bootstrap/accordion";
 import {CarouselModule} from "ngx-bootstrap/carousel";
 import {ModalModule} from "ngx-bootstrap/modal";
@@ -54,6 +54,7 @@ import {ErrorInterceptorService} from "./services/auth/error-interceptor.service
     ResourceNotFoundComponent,
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
