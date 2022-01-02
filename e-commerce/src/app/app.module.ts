@@ -29,10 +29,10 @@ import {ModalModule} from "ngx-bootstrap/modal";
 import {PaginationModule} from "ngx-bootstrap/pagination";
 import {PopoverModule} from "ngx-bootstrap/popover";
 import {TooltipModule} from "ngx-bootstrap/tooltip";
-
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TokenInterceptorService} from "./services/auth/token-interceptor.service";
 import {ErrorInterceptorService} from "./services/auth/error-interceptor.service";
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +52,7 @@ import {ErrorInterceptorService} from "./services/auth/error-interceptor.service
     ApplicationErrorComponent,
     PageNotFoundComponent,
     ResourceNotFoundComponent,
+    ProfileComponent,
   ],
   imports: [
     RouterModule,
