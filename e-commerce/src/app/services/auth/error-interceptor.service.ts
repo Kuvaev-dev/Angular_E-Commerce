@@ -1,9 +1,11 @@
 import {Injectable} from "@angular/core";
-import {HttpInterceptor} from "@angular/common/http";
-import {HttpRequest} from "@angular/common/http";
-import {HttpHandler} from "@angular/common/http";
-import {HttpEvent} from "@angular/common/http";
-import {HttpErrorResponse} from "@angular/common/http";
+import {
+  HttpInterceptor,
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpErrorResponse
+} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError} from "rxjs/operators";
 import {AuthService} from "./auth.service";
@@ -13,7 +15,6 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 @Injectable({
   providedIn: "root"
 })
-
 export class ErrorInterceptorService implements HttpInterceptor {
   intercept(
     request: HttpRequest<any>,
@@ -42,7 +43,6 @@ export class ErrorInterceptorService implements HttpInterceptor {
           error = err.message || err.statusText;
           return throwError(error);
         }
-
       })
     );
   }
