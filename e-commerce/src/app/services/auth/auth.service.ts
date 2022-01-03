@@ -21,16 +21,16 @@ export class AuthService {
   ) {
   }
 
-  _registerUrl = `http://localhost:4200/auth/register`;
-  _loginUrl = `http://localhost:4200/auth/login`;
-  _userUrl = `http://localhost:4200/auth/current-user`;
-  _profileUrl = `http://localhost:4200/profile`;
-  private _usersURL = `http://localhost:4200/auth/system-users`;
-  private _userDataURL = `http://localhost:4200/auth/user-main-data`;
+  _registerUrl = `http://localhost:3000/auth/register`;
+  _loginUrl = `http://localhost:3000/auth/login`;
+  _userUrl = `http://localhost:3000/auth/current-user`;
+  _profileUrl = `http://localhost:3000/profile`;
+  private _usersURL = `http://localhost:3000/auth/system-users`;
+  private _userDataURL = `http://localhost:3000/auth/user-main-data`;
 
-  private imageChangeUrl = `http://localhost:4200/profile/userprofile/changeprofileimage`;
-  private newImageUrl = `http://localhost:4200/profile/userprofile/setprofileimage`;
-  private contactUrl = `http://localhost:4200/contacts/new-mail`;
+  private imageChangeUrl = `http://localhost:3000/profile/userprofile/changeprofileimage`;
+  private newImageUrl = `http://localhost:3000/profile/userprofile/setprofileimage`;
+  private contactUrl = `http://localhost:3000/contacts/new-mail`;
   errorsHandler = new ErrorHandler();
   public username: string;
   public cart: Cart;
@@ -38,7 +38,7 @@ export class AuthService {
   public profile: Profile;
   public currentUser: User;
 
-  registerUser(registrationInfo: any): Observable<void> {
+  registerUser(registrationInfo): Observable<void> {
     return this.http.post<void>(this._registerUrl, registrationInfo);
   }
 
@@ -81,7 +81,7 @@ export class AuthService {
     }
   }
 
-  updateProfile(updateForm: any): Observable<Profile> {
+  updateProfile(updateForm): Observable<Profile> {
     try {
       return this.http.put<Profile>(
         `${this._profileUrl}/userprofile/edit`,
@@ -100,7 +100,7 @@ export class AuthService {
     }
   }
 
-  changeProfileImage(imageForm: any): Observable<Profile> {
+  changeProfileImage(imageForm): Observable<Profile> {
     try {
       return this.http.patch<Profile>(this.imageChangeUrl, imageForm);
     } catch (err) {
@@ -108,7 +108,7 @@ export class AuthService {
     }
   }
 
-  addProfileImage(imageForm: any): Observable<Profile> {
+  addProfileImage(imageForm): Observable<Profile> {
     try {
       return this.http.post<Profile>(this.newImageUrl, imageForm);
     } catch (err) {

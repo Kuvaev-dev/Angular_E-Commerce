@@ -44,6 +44,7 @@ const routes: Routes = [
     path: 'orders',
     component: OrderComponent,
     canActivate: [UserAuthGuard]
+
   },
   {
     path: 'cart',
@@ -85,7 +86,7 @@ const routes: Routes = [
     path: 'categories',
     component: CategoryListComponent,
     resolve: {
-      categories: CategoryResolverService
+      categories: CategoryResolverService // only if the route is: localhost:4200/categories
     }
   },
   {
@@ -100,7 +101,7 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then(a => a.AdminModule)
   },
   {
-    path: '**',
+    path: '**', // unknown path
     component: PageNotFoundComponent
   }
 ];
