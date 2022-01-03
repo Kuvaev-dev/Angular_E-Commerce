@@ -38,7 +38,7 @@ export class AuthService {
   public profile: Profile;
   public currentUser: User;
 
-  registerUser(registrationInfo): Observable<void> {
+  registerUser(registrationInfo: any): Observable<void> {
     return this.http.post<void>(this._registerUrl, registrationInfo);
   }
 
@@ -81,7 +81,7 @@ export class AuthService {
     }
   }
 
-  updateProfile(updateForm): Observable<Profile> {
+  updateProfile(updateForm: any): Observable<Profile> {
     try {
       return this.http.put<Profile>(
         `${this._profileUrl}/userprofile/edit`,
@@ -100,7 +100,7 @@ export class AuthService {
     }
   }
 
-  changeProfileImage(imageForm): Observable<Profile> {
+  changeProfileImage(imageForm: any): Observable<Profile> {
     try {
       return this.http.patch<Profile>(this.imageChangeUrl, imageForm);
     } catch (err) {
@@ -108,7 +108,7 @@ export class AuthService {
     }
   }
 
-  addProfileImage(imageForm): Observable<Profile> {
+  addProfileImage(imageForm: any): Observable<Profile> {
     try {
       return this.http.post<Profile>(this.newImageUrl, imageForm);
     } catch (err) {
