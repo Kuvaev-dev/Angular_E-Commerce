@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registrationForm: FormGroup;
+  registrationForm: FormGroup = new FormGroup({});
 
   constructor(
     private fb: FormBuilder,

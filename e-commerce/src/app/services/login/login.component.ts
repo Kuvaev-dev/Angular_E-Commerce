@@ -1,9 +1,9 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../../../services/auth/auth.service";
+import {AuthService} from "../auth/auth.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {CartService} from "../../../services/cart/cart.service";
-import {AlertService} from "../../../services/alert/alert.service";
+import {CartService} from "../cart/cart.service";
+import {AlertService} from "../alert/alert.service";
 import {BsModalRef, BsModalService} from "ngx-bootstrap";
 
 @Component({
@@ -12,7 +12,7 @@ import {BsModalRef, BsModalService} from "ngx-bootstrap";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  authCredentialsDto: FormGroup;
+  authCredentialsDto: FormGroup = new FormGroup({});
   modalRef: BsModalRef;
   showPass = true;
   @ViewChild('invalidCredentials', {static: true}) invCredentials: TemplateRef<any>;
