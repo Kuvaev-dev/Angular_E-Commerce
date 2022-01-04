@@ -75,7 +75,7 @@ export class CategoryService {
     }
   }
 
-  deleteProduct(categoryId: number, productId: number): Observable<void> {
+  deleteProduct(categoryId: number, productId: number) {
     try {
       const urlById = `${this.categoryUrl}/${categoryId}/products/${productId}`;
       return this.http.delete<void>(urlById);

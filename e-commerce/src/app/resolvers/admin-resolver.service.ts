@@ -13,6 +13,6 @@ export class AdminResolverService implements Resolve<User[]> {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<User[]> {
-    return this.authService.getUsers();
+    return this.authService.getSystemUsers();
   }
 }
