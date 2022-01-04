@@ -9,7 +9,7 @@ import {Category} from "./models/category";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'e-commerce';
+  title = 'Angular E-Commerce';
   categories: Category[];
 
   constructor(public authService: AuthService,
