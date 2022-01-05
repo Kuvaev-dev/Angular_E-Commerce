@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from '../services/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
@@ -33,6 +32,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TokenInterceptorService} from "./services/auth/token-interceptor.service";
 import {ErrorInterceptorService} from "./services/auth/error-interceptor.service";
 import { ProfileComponent } from './components/profile/profile.component';
+import {LoginComponent} from "./components/auth/login/login.component";
+import {AddToCartComponent} from "./shared/add-to-cart/add-to-cart.component";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     PageNotFoundComponent,
     ResourceNotFoundComponent,
     ProfileComponent,
+    AddToCartComponent,
   ],
   imports: [
     RouterModule,

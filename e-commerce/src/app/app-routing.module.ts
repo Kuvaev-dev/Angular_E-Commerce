@@ -5,7 +5,6 @@ import {PageNotFoundComponent} from "./shared/page-not-found/page-not-found.comp
 import {ProfileComponent} from "./components/profile/profile.component";
 import {OrderComponent} from "./components/order/order.component";
 import {CartComponent} from "./components/cart/cart.component";
-import {LoginComponent} from "./services/login/login.component";
 import {RegisterComponent} from "./components/auth/register/register.component";
 import {ProductListComponent} from "./components/product-list/product-list.component";
 import {ProductDetailsComponent} from "./components/product-details/product-details.component";
@@ -20,6 +19,7 @@ import {AdminAuthGuard} from "./guards/admin-auth.guard";
 import {ApplicationErrorComponent} from "./shared/application-error/application-error.component";
 import {ResourceNotFoundComponent} from "./shared/resource-not-found/resource-not-found.component";
 import {ContactComponent} from "./components/contact/contact.component";
+import {LoginComponent} from "./components/auth/login/login.component";
 
 
 const routes: Routes = [
